@@ -57,8 +57,6 @@ function evaluar() {
 
         score += 2;
 
-        time = time + 3;
-
         document.getElementById("timeSpan").innerHTML = time + " s";
 
         document.getElementById("score").innerHTML = score;
