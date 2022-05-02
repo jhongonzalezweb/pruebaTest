@@ -1,65 +1,19 @@
-body {
-    background-color: rgb(15, 109, 141);
-
+/* Animación con keyframe llamada "latidos" */
+@keyframes latidos {
+    from { transform: none; }
+    50% { transform: scale(1.4); }
+    to { transform: none; }
 }
-.container {
-    padding: 50px;
-    background-image: url(https://www.portalprogramas.com/imagenes/programas/es/998/7998_1.jpg);
-    text-align: center;
-    color: #42C920;
-}
-
-h2 {
-    font-family: 'Lobster', cursive;
-    font-size: 350%;
-}
-
-p {
-    background: hsla(0, 0%, 0%, 0.75);
-    text-align: center;
-    font-size: 25px;
-    font-family: 'Lobster', cursive;
-    font-family: 'Tapestry', cursive;
-    }
+/* En la clase corazon vamos a llamar latidos en la animación  */
+.corazon {
+	display: inline-block;
+	font-size: 150px;
+	text-shadow: 0 0 10px #222,1px 1px  0 #450505;
+	color: red;
+	animation: latidos .5s infinite;
+	transform-origin: center;
 }
 
-button {
-    text-align: center;
-    background-color: red;
-}
-
-input {
-    border-radius: 5px;
-    background-color: #def;
-    border: 1px solid #39c;
-    height: 35px;
-
-}
-
-#score {
-    font-size: 250%;
-}
-
-#text {
-    text-align: center;
-    background-color: #b8e2ae;
-    font-size: 150%;
-}
-
-button {
-    box-shadow: inset 1px 1px gold;
-    height: 35px;
-    width: 250px;
-    border-radius: 10px;
-    background-color: #42C920;
-    font-size: 120%;
-    font-family: 'Lobster', cursive;
-}
-
-.anotherclass {
-    
-    font-size: 250%;
-    padding-top: 50px;
-    height: 150px;
-    color: #42C920;
+body { text-align: center;
+  background: #333; height: 230px;
 }
