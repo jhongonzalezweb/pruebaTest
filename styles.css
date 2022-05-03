@@ -9,7 +9,6 @@ body {
   }
 
   h1 , h2 {
-      font-size: 200%;
       text-align: center;
       padding-top: 15px;
       color: white;
@@ -19,7 +18,6 @@ body {
     h4 {
         text-align: center;
         color: red;
-        font-size: 150%;
 
 }
   .heart{
