@@ -1,123 +1,58 @@
-$loveCount: 100;
-$loveSize: 450;
-
 body {
-  background: #000;
-  height: 100vh;
-  overflow: hidden;
-}
-#ui {
-  .love {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -#{$loveSize / 2}px 0 0 -#{$loveSize / 2}px;
-    
-    &:last-child {
-      .love_word {
-        color: red;
-        font-size: 3.5rem;
-        text-shadow: 0 0 10px rgba(255, 0, 0, 1);
-      }
-    }
-    &_word {
-      color: #fff;
-      font-size: 1.4rem;
-      transform: translateY(-100%) rotateZ(-30deg);
-      font-family: 'Dosis', sans-serif;
-      text-shadow: 0 0 10px rgba(255, 200, 0, 1);
-      letter-spacing: 2px;
-    }
-    &_horizontal {
-      animation: horizontal 10000ms infinite alternate ease-in-out;
-    }
-    &_vertical {
-      animation: vertical 20000ms infinite linear;
-    }
-    @for $i from 1 through $loveCount {
-      &:nth-child(#{$i}) {
-        $delay: -#{$i * 300}ms;
-        .love_horizontal {
-          animation-delay: $delay;
-        }
-        .love_vertical {
-          animation-delay: $delay;
-        }
-      }
-    }
+    background-color: black;
+    font-size: 1.2em;
+    font-size: 1.2em;
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
   }
-}
 
-@keyframes horizontal {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(#{$loveSize}px);
-  }
+  h1 , h2 {
+      font-size: 200%;
+      text-align: center;
+      padding-top: 15px;
+      color: white;
+      
+    }
+    
+    h4 {
+        text-align: center;
+        color: red;
+        font-size: 150%;
+
 }
-@keyframes vertical {
-  0% {
-    transform: translateY(#{$loveSize / 2.5}px);
+  .heart{
+    --size: 200px;
+    --color: red;
+    transform:rotate(45deg);
+    animation:beat 1s infinite alternate ease-in-out;
   }
-  10% {
-    transform: translateY(#{$loveSize / 10}px);
+  @keyframes beat{
+    to{
+      transform: rotate(45deg) scale(1.05);
+    }
   }
-  15% {
-    transform: translateY(#{$loveSize / 100}px);
+  
+  .heart,
+  .heart::before,
+  .heart::after{
+      width: var(--size);
+      height: var(--size);
+      background:var(--color);
   }
-  18% {
-    transform: translateY(0px);
+  .heart::before,
+  .heart::after{
+    content:'';
+    display: block;
+    border-radius:50%;
   }
-  20% {
-    transform: translateY(#{$loveSize / 100}px);
+  .heart::before{
+    margin-top: calc(var(--size)*-.5);
+   
   }
-  22% {
-    transform: translateY(#{$loveSize / 13}px);
+  .heart::after{
+    margin-top: calc(var(--size)* -0.5);
+    margin-left: calc(var(--size)* -0.5);
   }
-  24% {
-    transform: translateY(#{$loveSize / 7}px);
-  }
-  25% {
-    transform: translateY(#{$loveSize / 4}px);
-  }
-  26% {
-    transform: translateY(#{$loveSize / 7}px);
-  }
-  28% {
-    transform: translateY(#{$loveSize / 13}px);
-  }
-  30% {
-    transform: translateY(#{$loveSize / 100}px);
-  }
-  32% {
-    transform: translateY(0px);
-  }
-  35% {
-    transform: translateY(#{$loveSize / 100}px);
-  }
-  40% {
-    transform: translateY(#{$loveSize / 10}px);
-  }
-  50% {
-    transform: translateY(#{$loveSize / 2.5}px);
-  }
-  71% {
-    transform: translateY(#{$loveSize / 1.05}px);
-  }
-  72.5% {
-    transform: translateY(#{$loveSize / 1.02}px);
-  }
-  75% {
-    transform: translateY(#{$loveSize}px);
-  }
-  77.5% {
-    transform: translateY(#{$loveSize / 1.02}px);
-  }
-  79% {
-    transform: translateY(#{$loveSize / 1.05}px);
-  }
-  100% {
-    transform: translateY(#{$loveSize / 2.5}px);
-  }
-}
+  
