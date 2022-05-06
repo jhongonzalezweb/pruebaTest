@@ -16,8 +16,14 @@ body {
     }
     
     h4 {
-        text-align: center;
-        color: red;
+      text-align: center;
+      color: red;
+
+}
+
+span {
+  text-align: center;
+  color: red;
 
 }
   .heart{
@@ -53,4 +59,5 @@ body {
     margin-top: calc(var(--size)* -0.5);
     margin-left: calc(var(--size)* -0.5);
   }
+  
   
