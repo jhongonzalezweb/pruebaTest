@@ -1,8 +1,8 @@
+
 body {
 
   background-image: url("we.jpg");
   background-size: 100%;
-
   background-repeat: no-repeat;
   background-position: center;
   font-size: 1.2em;
@@ -14,10 +14,11 @@ body {
 }
 
 h1,
-h2 {
+h2, h3 {
   background-color: hsla(0, 0%, 0%, 0.6);
   text-align: center;
-  padding-top: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   color: white;
 
 }
@@ -30,6 +31,7 @@ h4 {
 
 span {
   text-align: center;
+  font-size: 1.2em;
   color: red;
 
 }
