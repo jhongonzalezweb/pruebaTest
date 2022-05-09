@@ -1,23 +1,30 @@
 body {
-    background-color: black;
-    font-size: 1.2em;
-    font-size: 1.2em;
-    display: grid;
-    min-height: 100vh;
-    justify-content: center;
-    align-content: center;
-  }
 
-  h1 , h2 {
-      text-align: center;
-      padding-top: 15px;
-      color: white;
-      
-    }
-    
-    h4 {
-      text-align: center;
-      color: red;
+  background-image: url("we.jpg");
+  background-size: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 1.2em;
+  font-size: 1.2em;
+  display: grid;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+}
+
+h1,
+h2 {
+  background-color: hsla(0, 0%, 0%, 0.6);
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+
+}
+
+h4 {
+  text-align: center;
+  color: red;
 
 }
 
@@ -26,38 +33,41 @@ span {
   color: red;
 
 }
-  .heart{
-    --size: 200px;
-    --color: red;
-    transform:rotate(45deg);
-    animation:beat 1s infinite alternate ease-in-out;
+
+.heart {
+  --size: 200px;
+  --color: red;
+  transform: rotate(45deg);
+  animation: beat 1s infinite alternate ease-in-out;
+}
+
+@keyframes beat {
+  to {
+    transform: rotate(45deg) scale(1.05);
   }
-  @keyframes beat{
-    to{
-      transform: rotate(45deg) scale(1.05);
-    }
-  }
-  
-  .heart,
-  .heart::before,
-  .heart::after{
-      width: var(--size);
-      height: var(--size);
-      background:var(--color);
-  }
-  .heart::before,
-  .heart::after{
-    content:'';
-    display: block;
-    border-radius:50%;
-  }
-  .heart::before{
-    margin-top: calc(var(--size)*-.5);
-   
-  }
-  .heart::after{
-    margin-top: calc(var(--size)* -0.5);
-    margin-left: calc(var(--size)* -0.5);
-  }
-  
-  
+}
+
+.heart,
+.heart::before,
+.heart::after {
+  width: var(--size);
+  height: var(--size);
+  background: var(--color);
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  display: block;
+  border-radius: 50%;
+}
+
+.heart::before {
+  margin-top: calc(var(--size)*-.5);
+
+}
+
+.heart::after {
+  margin-top: calc(var(--size)* -0.5);
+  margin-left: calc(var(--size)* -0.5);
+}
